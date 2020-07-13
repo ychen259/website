@@ -39,6 +39,7 @@
     "prepare": "npm run snyk-protect"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.1",
     "acl": "^0.4.11",
     "amazon-s3-uri": "0.0.3",
     "async": "~2.5.0",
