@@ -50,7 +50,7 @@
   <div id="nav">
   <nav id="topnav">
     <ul class="topnav">
-      <li class="home"><a href="index.html" class="nav"><span class="home-icon icon-home"></span><span class="home-text">Home</span></a></li>
+      <li class="home"><a ng-click="backToHomePage()" href="#" class="nav"><span class="home-icon icon-home"></span><span class="home-text">Home</span></a></li>
 
       <li ng-repeat="item in vm.menu.items | orderBy: 'position'" ng-if="item.shouldRender(vm.authentication.user);" ng-switch="item.type" ng-class="{ dropdown: item.type === 'dropdown' }" ui-sref-active="active" class="{{item.class}}" uib-dropdown="item.type === 'dropdown'">
         <a style="color:#fff" class="nav" ng-switch-when="dropdown" class="dropdown-toggle" uib-dropdown-toggle role="button">{{::item.title}}&nbsp;<span class="caret"></span></a>
