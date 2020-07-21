@@ -1,7 +1,6 @@
 <section>
 
-<a class="skip-to-content-btn" href="#box" role="button">Skip to main content</a>
-<div id="wrapper">
+<div id="">
 <!---->
 <div id="main">
       
@@ -52,14 +51,7 @@
 </header>
 -->
 
-<div id="nav">
-  <nav id="topnav">
-    <ul class="topnav">
-      <li class="home"><a href="index.html" class="nav"><span class="home-icon icon-home"></span><span class="home-text">Home</span></a></li><li class="location"><a href="location.html" class="nav">Location</a></li><li class="stay"><a href="suites.html" class="nav">Rooms</a></li><li class="amenities"><a href="services.html" class="nav">Services</a></li><li class="dining"><a href="dining.html" class="nav">Dining </a></li><li class="logocenter"></li><li class="meetings tright"><a href="meetings-weddings.html" class="nav">Meetings & Weddings</a></li><li class="thingstodo tright"><a href="things-to-do.html" class="things nav">Things To Do</a></li><li class="pkg submenulist tright"><a href="special-pkg.html" class="nav subpkg">Specials</a></li><li class="contact tright"><a href="contact.html" class="nav">Contact</a></li>
-    </ul>
-    <div class="clear"></div>
-  </nav>
-</div>
+
 
 </div>
 
@@ -781,7 +773,7 @@ $('.multi-item-carousel .item').each(function(){
   <div class="row">
 
     <div class="col-md-8">
-          <div id="map_canvas" class="location-map" style="width: 100%; height: 600px;"></div>
+          <div id="map_canvas" class="location-map" style="width: 100%; height: 600px;" ng-controller="HomeController as Home"></div>
     </div>
 
     <div class="col-md-4">
@@ -802,8 +794,10 @@ $('.multi-item-carousel .item').each(function(){
 <!--script for google map-->
 <script>
 function myMap() {
+
 var mapProp= {
   center:new google.maps.LatLng(34.151570,-118.005770),
+   //center:new google.maps.LatLng(center.latitude,center.longitude),
   zoom:17,
 };
 var map = new google.maps.Map(document.getElementById("map_canvas"),mapProp);
@@ -816,9 +810,13 @@ var marker = new google.maps.Marker({
 marker.setMap(map);
 
 var infowindow = new google.maps.InfoWindow({
-  content:"Aztec Hotel<br><br>" + 
+  content:
+          "<span style='font-family:Times New Roman, Times, serif'>"+
+          "<b>Aztec Hotel</b><br><br>" +
+
           "311 W Foothill Blvd, Monrovia, CA, 91016 <br><br>" +
-          "Phone: 111-111-1111" 
+          "Phone: 111-111-1111" +
+          "</span>"
 });
 
 infowindow.open(map,marker);

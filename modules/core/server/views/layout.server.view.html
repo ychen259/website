@@ -60,8 +60,10 @@
 </head>
 
 <body class="ng-cloak">
-  <header ng-include="'/modules/core/client/views/header.client.view.html'" class="navbar navbar-fixed-top navbar-inverse"></header>
-  <section class="content">
+  <header ng-include="'/modules/core/client/views/header.client.view.html'" class="navbar navbar-fixed-top "></header>
+  <!--<header ng-include="'/modules/core/client/views/header.client.view.html'" class=" "></header>-->
+  <section class="content"> <!--go with fixed top and need to fix #middle in home.css-->
+  <!--<section class="">-->
     <section class="">
       {{{block "content"}}}
     </section>
