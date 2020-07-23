@@ -5,10 +5,16 @@ var defaultEnvConfig = require('./default');
 module.exports = {
   db: {
     uri: process.env.MONGOHQ_URL || process.env.MONGODB_URI || 'mongodb://ychen259:Aa947496@ds015919.mlab.com:15919/aztec-hotel',
+    //mongodb+srv://ychen259:<password>@cluster0.wccdn.mongodb.net/test
+    //
     options: {},
     // Enable mongoose debug mode
     debug: process.env.MONGODB_DEBUG || false
   },
+  googleMaps: {
+    key: 'AIzaSyCd4CZ-xvUEqITMM8nMi0JvH4LZ5Nltwn8'
+  },
+
   log: {
     // logging with Morgan - https://github.com/expressjs/morgan
     // Can specify one of 'combined', 'common', 'dev', 'short', 'tiny'

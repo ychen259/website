@@ -21,5 +21,10 @@
       // Collapsing the menu after navigation
       vm.isCollapsed = false;
     }
+
+    $scope.backToHomePage = function(){
+       $state.go('home');
+       //document.location.reload(); // refresh the page ,because the dash for home button has problem
+    }
   }
 }());
