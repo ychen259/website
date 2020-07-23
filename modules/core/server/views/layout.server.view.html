@@ -69,13 +69,39 @@
     </section>
 
       <span ng-include="'/modules/core/client/views/footer.client.view.html'"></span>
+      <button onclick="scrollToTop()" id="backtotop" title="Go to top"><span class="icon-arrow-up2" aria-hidden="true"></span></button>
+
   </section>
 
   <!--my script-->
 <script>
- 
-//document.write(unescape("%3Cscript src='https://www.hipalmbeachairport.com/dynamic/js/home.aspx' type='text/javascript'%3E%3C/script%3E"));</script>
-<a id="backtotop" href="javascript:;" role="button"><span class="icon-arrow-up2" aria-hidden="true"></span> <span class="sr-only">Back to top</span></a>
+ //Get the button:
+mybutton = document.getElementById("backtotop");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+//document.write(unescape("%3Cscript src='https://www.hipalmbeachairport.com/dynamic/js/home.aspx' type='text/javascript'%3E%3C/script%3E"));
+
+function scrollToTop() {
+    var position =
+        document.body.scrollTop || document.documentElement.scrollTop;
+    if (position) {
+        window.scrollBy(0, -Math.max(1, Math.floor(position / 10)));
+        scrollAnimation = setTimeout("scrollToTop()", 30);
+    } else clearTimeout(scrollAnimation);
+}
+
+
+</script>
+
 
 
 
