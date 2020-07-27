@@ -60,15 +60,17 @@
 </head>
 
 <body class="ng-cloak">
+
+
   <header ng-include="'/modules/core/client/views/header.client.view.html'" class="navbar navbar-fixed-top "></header>
   <!--<header ng-include="'/modules/core/client/views/header.client.view.html'" class=" "></header>-->
   <section class="content"> <!--go with fixed top and need to fix #middle in home.css-->
   <!--<section class="">-->
     <section class="container-fluid">
       {{{block "content"}}}
+      <span ng-include="'/modules/core/client/views/footer.client.view.html'"></span>
     </section>
 
-      <span ng-include="'/modules/core/client/views/footer.client.view.html'"></span>
       <button onclick="scrollToTop()" id="backtotop" title="Go to top"><span class="icon-arrow-up2" aria-hidden="true"></span></button>
 
   </section>
@@ -81,6 +83,7 @@ mybutton = document.getElementById("backtotop");
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
+
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
@@ -90,13 +93,20 @@ function scrollFunction() {
 }
 //document.write(unescape("%3Cscript src='https://www.hipalmbeachairport.com/dynamic/js/home.aspx' type='text/javascript'%3E%3C/script%3E"));
 
+
 function scrollToTop() {
+
     var position =
         document.body.scrollTop || document.documentElement.scrollTop;
     if (position) {
         window.scrollBy(0, -Math.max(1, Math.floor(position / 10)));
         scrollAnimation = setTimeout("scrollToTop()", 30);
     } else clearTimeout(scrollAnimation);
+    /*window.scroll({
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth'
+    });*/
 }
 
 
