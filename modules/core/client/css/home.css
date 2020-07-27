@@ -168,8 +168,8 @@ header{
 }
 #logo .logo-inner{
 	background:#fff;
-	height:105px;
-	margin:0px auto 0 48%;
+	//height:105px;  //logo show in bar
+ 	margin:0px auto 0 48%;
 	padding:0;
 	//width:213px;
 	display:block;
@@ -179,12 +179,14 @@ header{
   width: 10%;
   margin-left: auto;
   margin-right: auto;
+  margin-top:-30px;  //logo show in bar
 }
 #centerImg{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
+  //width: 70%;//logo show in bar
+  width:100%;//logo show in bar
 }
 #logo .logo-inner a{
 	display:block;
@@ -228,7 +230,7 @@ header{
 #nav{
 	background:#498523;
 	height:55px;
-	margin-top:-55px;
+	//margin-top:-55px; //logo show in bar
 	text-align:left;
 	z-index:100;
 }
