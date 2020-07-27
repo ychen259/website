@@ -362,6 +362,11 @@ header{
 	width:15px;
 	background:url(https://www.hipalmbeachairport.com/images_noindex/sprite.png) no-repeat -80px -32px
 }
+.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
 .homesection-1{
 	margin:0;
 	padding:0 .7%;

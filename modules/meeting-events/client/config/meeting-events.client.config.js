@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('things-to-dos')
+    .module('meeting-events')
     .run(menuConfig);
 
   menuConfig.$inject = ['menuService'];
@@ -10,12 +10,11 @@
   function menuConfig(menuService) {
     // Set top bar menu items
     menuService.addMenuItem('topbar', {
-      title: 'Things To Do',
-      state: 'things-to-dos.default',
+      title: 'Meeting & events',
+      state: 'meeting-events.default',
       //type: 'dropdown',
       roles: ['*']
     });
-
 
   }
 }());
