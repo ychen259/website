@@ -1060,11 +1060,13 @@ left: 65%;
 	font-size: 27px;
 	margin-bottom: 17px;
 }
-.signature-slider-title {color: #222121;
-font-size: 24px;
-line-height: normal;
-margin-bottom: 20px;
-text-transform: capitalize;}
+.signature-slider-title {
+	color: #222121;
+	font-size: 24px;
+	line-height: normal;
+	margin-bottom: 20px;
+	text-transform: capitalize;
+}
 .explore-gallery-title {
 	font-size: 28px;
 }

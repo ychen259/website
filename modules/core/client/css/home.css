@@ -236,7 +236,7 @@ header{
 }
 #topnav{
 	margin:0 auto;
-	max-width:80%
+	max-width:70%
 }#topnav ul{
 	list-style:none;
 	line-height:normal;
@@ -600,7 +600,8 @@ header,#logo,#topnav,.reservation-bg,#photogallery-thumbs li::after,#photogaller
 
 
 
-.dining-item-default-title::after{top:0;z-index:-1;background-size:cover;position:absolute;left:0;right:0;height:100%;background:#000;content:'';background:url(https://www.hipalmbeachairport.com/images_noindex/bg-ttd.png) repeat center center;background-size:100% 100%}.dining-item-box.dining-item-box5{overflow:hidden}.dining-item-default-title{padding:40px}#topnav a.navON:link::before,#topnav a.navON:visited::before,#topnav a.navON:hover::before,#topnav a.nav:hover::before,#topnav .navhover a.nav::before,#topnav a.navON:focus::before,#topnav a.nav:focus::before{bottom:0;opacity:1}@media only screen and (max-width:1200px){#wrapper{min-width:1024px}
+.dining-item-default-title::after{top:0;z-index:-1;background-size:cover;position:absolute;left:0;right:0;height:100%;background:#000;content:'';background:url(https://www.hipalmbeachairport.com/images_noindex/bg-ttd.png) repeat center center;background-size:100% 100%}.dining-item-box.dining-item-box5{overflow:hidden}.dining-item-default-title{padding:40px}
+#topnav a.navON:link::before,#topnav a.navON:visited::before,#topnav a.navON:hover::before,#topnav a.nav:hover::before,#topnav .navhover a.nav::before,#topnav a.navON:focus::before,#topnav a.nav:focus::before{bottom:0;opacity:1}@media only screen and (max-width:1200px){#wrapper{min-width:1024px}
 
 header,#container,footer,#reservation{
 	width:98%
@@ -632,3 +633,8 @@ body.zommLevel #topnav li.logocenter a.logocenter{
 body.zommLevel #topnav li a{font-size:13px;padding:9px 0 0}body.zommLevel #topnav{width:auto;max-width:inherit;right:0;margin-left:20px}body.zommLevel #nav{height:42px}body.zommLevel .reservation-bg{max-width:initial;height:auto}body.zommLevel #reservation{width:auto}body.zommLevel #reservationtable .button{width:auto;padding:0 10px}body.zommLevel .resdropdown{width:93px}body.zommLevel .resinputbox{width:143px}body.zommLevel #container,body.zommLevel footer{width:98%}body.zommLevel #wrapper{overflow:hidden}body.zommLevel #logo:before,body.zommLevel #logo:after{display:none}body.zommLevel #logo{top:7px}body.zommLevel #weather-box{left:120px}body.zommLevel #wrapper,body.zommLevel header,body.zommLevel #container,body.zommLevel footer,body.zommLevel #reservation{max-width:initial;min-width:inherit}body.zommLevel .googleaddress{width:100%;margin-bottom:30px}body.zommLevel .module-tabbing{position:relative;top:0}body.zommLevel .serviceinner>div{display:inline-block}body.zommLevel .content_services{max-width:inherit}body.zommLevel .dining-item-box.dining-item-box5 .dining-item-page-title{margin-bottom:0;padding:0 20px 20px}body.zommLevel .dining-item-page-title{font-size:15px;padding:0 10px 18px}body.zommLevel .reservation-bg{margin-top:0}@media only screen and (max-width:1160px){}@media only screen and (max-width:1140px){body.zommLevel #wrapper{min-width:inherit;max-width:inherit}body.zommLevel #container{width:98%}body.zommLevel #reservationtable ul li ul li{padding-right:0}body.zommLevel #contentinfo{margin:0 auto 0}}@media only screen and (max-width:1040px){}@media only screen and (max-width:960px){}@media only screen and (max-width:920px){}@media only screen and (max-width:880px){}@media only screen and (max-width:690px){}@media only screen and (max-width:640px){}#cke_editor1{width:auto}.cke_skin_kama .cke_wrapper{background-color:transparent;background-image:none;padding:0;margin:0}.cke_show_borders #fact-box{margin-top:0}body.cke_show_borders{background:0 0!important}body.cke_show_borders a{text-decoration:none!important;list-style:none}.cke_skin_kama .cke_wrapper{}#cke_editor1{border:1px dashed!important;padding-left:2px;padding-right:2px}
 #cke_top_editor1,#cke_bottom_editor1{background-color:#fcfcfc}
 .cke_skin_kama .cke_wrapper{}
+/*************************************************/
+.carousel-inner-custom{
+	width:70%;
+	margin:auto;
+}
