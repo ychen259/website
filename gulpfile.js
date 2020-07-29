@@ -166,7 +166,7 @@ gulp.task('uglify', function () {
 // CSS minifying task
 gulp.task('cssmin', function () {
   return gulp.src(defaultAssets.client.css)
-    .pipe(plugins.csso())
+    .pipe(plugins.cssnano())
     .pipe(plugins.concat('application.min.css'))
     .pipe(plugins.rev())
     .pipe(gulp.dest('public/dist'));
