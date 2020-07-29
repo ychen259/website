@@ -11,9 +11,6 @@ module.exports = {
     // Enable mongoose debug mode
     debug: process.env.MONGODB_DEBUG || false
   },
-  googleMaps: {
-    key: 'AIzaSyCd4CZ-xvUEqITMM8nMi0JvH4LZ5Nltwn8'
-  },
 
   log: {
     // logging with Morgan - https://github.com/expressjs/morgan

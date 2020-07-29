@@ -10,7 +10,7 @@
   function menuConfig(menuService) {
     // Set top bar menu items
     menuService.addMenuItem('topbar', {
-      title: 'Things to dos',
+      title: 'Things To Do',
       state: 'things-to-dos.default',
       //type: 'dropdown',
       roles: ['*']

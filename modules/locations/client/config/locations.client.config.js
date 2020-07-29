@@ -10,7 +10,7 @@
   function menuConfig(menuService) {
     // Set top bar menu items
     menuService.addMenuItem('topbar', {
-      title: 'Locations',
+      title: 'Location',
       state: 'locations.default',
       //type: 'dropdown',
       roles: ['*']
