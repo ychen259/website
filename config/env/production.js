@@ -20,7 +20,6 @@ module.exports = {
       * servers. Adjust the settings below for your specific certificate
       * setup.
       * for connect to a replicaset, rename server:{...} to replset:{...}
-
       ssl: true,
       sslValidate: false,
       checkServerIdentity: false,
@@ -28,7 +27,6 @@ module.exports = {
       sslCert: fs.readFileSync('./config/sslcerts/ssl-cert.pem'),
       sslKey: fs.readFileSync('./config/sslcerts/ssl-key.pem'),
       sslPass: '1234'
-
       */
     },
     // Enable mongoose debug mode
