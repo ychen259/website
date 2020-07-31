@@ -27,5 +27,16 @@
        //document.location.reload(); // refresh the page ,because the dash for home button has problem
     }
 
+    $scope.goToContact = function(){
+       $state.go('contacts.default');
+    }
+
+    $scope.goToLocation = function(){
+       $state.go('locations.default');
+    }
+
+    $scope.goToThingToDo = function(){
+       $state.go('things-to-dos.default');
+    }
   }
 }());

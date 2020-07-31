@@ -17,10 +17,10 @@
       .state('meeting-events.default', {
         url: '',
         templateUrl: 'modules/meeting-events/client/views/meeting-event.client.view.html',
-        controller: 'MeetingEventsListController',
+        controller: 'MeetingEventsController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Meeting events default'
+          pageTitle: 'Meeting & Event'
         }
       });
   }

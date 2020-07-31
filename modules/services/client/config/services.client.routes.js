@@ -17,10 +17,10 @@
       .state('services.default', {
         url: '',
         templateUrl: 'modules/services/client/views/services.client.view.html',
-        controller: 'ServicesListController',
+        controller: 'ServicesController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Services List'
+          pageTitle: 'Services'
         }
       });
   }

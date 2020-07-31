@@ -17,10 +17,10 @@
       .state('locations.default', {
         url: '',
         templateUrl: 'modules/locations/client/views/locations.client.view.html',
-        controller: 'LocationsListController',
+        controller: 'LocationsController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Locations default'
+          pageTitle: 'Location'
         }
       })
 

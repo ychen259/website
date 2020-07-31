@@ -1,39 +1,41 @@
-<div class="" ng-controller="HeaderController as vm">
+<section>
+<div class="container-fluid" ng-controller="HeaderController as vm">
 
 
 <div id="wrapper">
 <!----><br>
 <div id="main">
 
-<div id="number"> Aztec Hotel, Monrovia <span> <a href="tel:561-659-3880" data-phonenumber="property-phone" target="_blank" rel="nofollow">561-659-3880</a></span> 
-</div>
+  <div id="number"> 
+  	Aztec Hotel, Monrovia <span> <a href="tel:111-111-1111" data-phonenumber="property-phone" target="_blank" rel="nofollow">111-111-1111</a></span> 
+  </div>
 
   <!--hotel logo-->
-  <div id="logo">
+  <div id="mylogo">
     <div class="logo-inner">
     	<div id="centerImg">
-      <a href="index.html">
-      <img class="img-responsive text-center" alt="Holiday Inn Palm Beach Airport - 1301 Belvedere Rd, West Palm Beach, Florida 33405" src="/modules/core/client/img/brand/holiday-inn-palm-beach-airport-logo.png" height="100" width="133"></a>
-    </div>
-</div>
+      		<a ng-click="backToHomePage()" href="#">
+      			<img class="img-responsive text-center" src="/modules/core/client/img/brand/holiday-inn-palm-beach-airport-logo.png" height="100" width="133"></a>
+    	</div>
+	</div>
   </div>
 
   <div id="subnav">
     <ul>
       <li class="sub-email-offers">
-        <a href="email-offers.html" class="nav"><span class="sub-icon icon-email"></span>Email Offers</a>
+        <a ng-click="goToContact()" href="#" class="nav"><span class="sub-icon icon-email"></span>Email Offers</a>
       </li>
 
       <li class="sub-emap">
-        <a href="map.html" class="nav"><span class="sub-icon icon-location"></span>E-Map</a>
+        <a ng-click="goToLocation()" href="#" class="nav"><span class="sub-icon icon-location"></span>E-Map</a>
       </li>
-
+      <!--
       <li class="sub-reviews">
-        <a href="reviews.html" class="nav"><span class="sub-icon icon-quotes-left"></span>Reviews</a>
-      </li>
+        <a ng-click="goToLocation()" href="#" class="nav"><span class="sub-icon icon-quotes-left"></span>Reviews</a>
+      </li>-->
 
       <li class="sub-photo ">
-        <a href="photos.html" class="nav"><span class="sub-icon icon-photo_library"></span>Photos</a>
+        <a ng-click="goToThingToDo()" href="#" class="nav"><span class="sub-icon icon-photo_library"></span>Photos</a>
       </li>
     </ul>
   </div>
@@ -60,50 +62,6 @@
   </nav>
   </div>
 </div>
-
-
-
-
-<!--
-  <nav class="navbar-collapse" uib-collapse="!vm.isCollapsed" role="navigation">
-    <ul class="nav navbar-nav" ng-if="vm.menu.shouldRender(vm.authentication.user);">
-      <li ng-repeat="item in vm.menu.items | orderBy: 'position'" ng-if="item.shouldRender(vm.authentication.user);" ng-switch="item.type" ng-class="{ dropdown: item.type === 'dropdown' }" ui-sref-active="active" class="{{item.class}}" uib-dropdown="item.type === 'dropdown'">
-        <a ng-switch-when="dropdown" class="dropdown-toggle" uib-dropdown-toggle role="button">{{::item.title}}&nbsp;<span class="caret"></span></a>
-        <ul ng-switch-when="dropdown" class="dropdown-menu">
-          <li ng-repeat="subitem in item.items | orderBy: 'position'" ng-if="subitem.shouldRender(vm.authentication.user);">
-            <a ui-sref="{{subitem.state}}({{subitem.params}})" ng-bind="subitem.title"></a>
-          </li>
-        </ul>
-        <a ng-switch-default ui-sref="{{item.state}}" ng-bind="item.title"></a>
-      </li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right" ng-hide="vm.authentication.user">
-      <li ui-sref-active="active">
-        <a ui-sref="authentication.signup">Sign Up</a>
-      </li>
-      <li class="divider-vertical"></li>
-      <li ui-sref-active="active">
-        <a ui-sref="authentication.signin">Sign In</a>
-      </li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right" ng-show="vm.authentication.user">
-      <li class="dropdown" uib-dropdown>
-        <a class="dropdown-toggle user-header-dropdown-toggle" uib-dropdown-toggle role="button">
-          <img ng-src="{{vm.authentication.user.profileImageURL}}" alt="{{vm.authentication.user.displayName}}" class="header-profile-image" />
-          <span ng-bind="vm.authentication.user.displayName"></span> <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu" role="menu">
-          <li ui-sref-active="active" ng-repeat="item in vm.accountMenu.items">
-            <a ui-sref="{{item.state}}" ng-bind="item.title"></a>
-          </li>
-          <li class="divider"></li>
-          <li>
-            <a href="/api/auth/signout" target="_self">Signout</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
--->
 </div>
 
+</section>

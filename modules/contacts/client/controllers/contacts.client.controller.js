@@ -38,6 +38,10 @@
           });     
     };
 
+    $scope.backToHomePage = function(){
+       $state.go('home');
+    }
+
 
 
   }

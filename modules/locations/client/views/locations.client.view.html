@@ -89,7 +89,7 @@
             <div id="container">
                 <div id="content">
                     <div id="breadcrumb">
-                      <a href="index.html">Home</a><span class="brd-icon icon-rightArrow"></span>Location
+                      <a ng-click="backToHomePage()" href="#">Home</a><span class="brd-icon icon-rightArrow"></span>Location
                     </div>
                     <section id="header">Location</section>
                     <div id="box">
@@ -106,7 +106,7 @@
                       </article>
 
 <!--------------------map code here----------------->
-                      <div class="box2">
+                      <div class="box2" id = "e-map">
                         <h2 class="padbottom">West Palm Beach, Florida Map</h2>
                           <div id="map_canvas" class="location-map" style="width: 100%; height: 400px;" ng-controller="HomeController as Home"></div>
                       </div>

@@ -20,7 +20,7 @@
         controller: 'ContactsController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Contacts default'
+          pageTitle: 'Contact'
         }
       });
   }
