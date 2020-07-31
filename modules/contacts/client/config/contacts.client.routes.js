@@ -17,7 +17,7 @@
       .state('contacts.default', {
         url: '',
         templateUrl: 'modules/contacts/client/views/contact.client.view.html',
-        controller: 'ContactsListController',
+        controller: 'ContactsController',
         controllerAs: 'vm',
         data: {
           pageTitle: 'Contacts default'

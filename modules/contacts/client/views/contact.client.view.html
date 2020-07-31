@@ -1,26 +1,272 @@
 <section>
-  <div class="page-header">
-    <h1>{{vm.contact._id ? 'Edit Contact' : 'New Contact'}}</h1>
+<section id="wrapper">
+  <div class="reservation-bg">
+    <div id="reservation">
+      <div id="reservationtable">
+        <form enctype="application/x-www-form-urlencoded" target="_blank" method="post" name="resform" id="resform" action="https://www.hipalmbeachairport.com/tracking/click-reservation.aspx">
+          <ul>
+            <li class="custom-reservation">
+              <label class="rtitle" for="checkindate">Check-in</label>
+              <input class="resinputbox" readonly="" id="checkindate" name="checkindate" type="text" value="">
+            </li>
+            <li class="custom-reservation">
+              <label class="rtitle" for="checkoutdate">Check-out</label>
+              <input class="resinputbox" readonly="" id="checkoutdate" name="checkoutdate" type="text" value="">
+            </li>
+            <li class="custom-reservation">
+              <label class="rtitle" for="NumberOfRooms">Rooms</label>
+              <select name="Rooms" id="NumberOfRooms" class="resdropdown">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select>
+            </li>
+
+            <li class="custom-reservation">
+              <label class="rtitle" for="NumberOfAdults">Adults</label>
+                <select name="Adults" id="NumberOfAdults" class="resdropdown">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
+            </li>
+
+            <li class="last-child custom-reservation">
+              <label class="rtitle" for="NumberOfChildrens">Children</label>
+                <select name="Children" id="NumberOfChildrens" class="resdropdown">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
+            </li>
+
+            <li class=""> 
+              <a class="button" role="button" href="javascript:{}" onkeypress="reservation_validation(); pushToGtmRenderByDom(this);" onclick="reservation_validation(); pushToGtmRenderByDom(this);" data-autodatalayer="" data-msevent="booking main" data-mscategory="booking entrances" data-msaction="click">
+                <span class="formslable" aria-hidden="true">booking widget</span>Check Availability</a> 
+            </li>
+
+            <li class="last-child-btn res-text1 remind-me-later" id="remindme"><a class="button" href="javascript:{}" id="bookingremind">Remind me Later</a></li>
+          </ul>
+        </form>
+      </div>
+      <div class="clear"></div>
+      <div id="res-rate-txt"> 
+        <a href="https://www.ihg.com/hotels/us/en/customer-care/lowest-internet-rate-terms-conditions" target="_blank" rel="nofollow">Best Rate Guarantee</a> 
+      </div>
+    </div>
   </div>
-  <div class="col-md-12">
-    <form name="vm.form.contactForm" class="form-horizontal" ng-submit="vm.save(vm.form.contactForm.$valid)" novalidate>
-      <fieldset>
-        <div class="form-group" show-errors>
-          <label class="control-label" for="name">Name</label>
-          <input name="name" type="text" ng-model="vm.contact.name" id="name" class="form-control" placeholder="Name" required>
-          <div ng-messages="vm.form.contactForm.name.$error" role="alert">
-            <p class="help-block error-text" ng-message="required">Contact name is required.</p>
+    <br><br><br>
+    <div class="bankforreserv"></div>
+      <section id="contentinfo" class="fixheader">
+        <div class="contentwrap">
+          <div id="container">
+            <section id="content">
+              <div id="breadcrumb">
+                <a href="index.html">Home</a><span class="brd-icon icon-rightArrow"></span>Contact
+              </div>
+              <section id="header">Contact</section>
+              <div id="box">
+                <article class="box2 text-center">
+                <h1>Save Time, Book Online <span>Make Your West Palm Beach, FL Hotel Reservations Here</span></h1>
+                <div class="firstpara">
+                  Situated just two miles from the Palm Beach International Airport, CityPlace and the Kravis Center, Holiday Inn Palm Beach Airport is the perfect destination for productive business travel and relaxing vacations in Florida&#39;s beautiful Orchid City.
+                  <div class="mobile-boxspacer">&nbsp;</div>
+                  Relax in fresh, beach-inspired accommodations, meet or celebrate in modern venues and enjoy on-site dining and fitness activities. Book your West Palm Beach hotel reservations now to experience the best of sunny Florida at our very best rates, guaranteed.</div>
+                  <div class="boxspacer">&nbsp;</div>
+                  <h2>Book with Confidence</h2>
+                  Clicking on the reservation link will take you to the official Intercontinental Hotels Group website where you can find the best rate publicly available on the Internet, guaranteed.
+                  <a href="https://www.ichotelsgroup.com/lowest" rel="nofollow" target="_blank" data-autodatalayer="" onclick="pushToGtmRenderByDom(this)" data-msevent="booking buttons" data-mscategory="booking entrances" data-msaction="click">
+                      <span class="formslable" aria-hidden="true">Click here-Contact</span> For more details on this guarantee,Click here.
+                    </a>
+                </article>
+
+                <article class="box2">
+                  <div class="contactusfrm">
+                    <div class="con-info">
+                      <div class="contact-title">
+                        <span>Contact Details</span> 
+                      </div>
+                      <div class="con-block con-block-first">
+                        <div class="cont-icon"><span class="icon-location"></span></div>
+                        <div class="cont-desc">
+                          <span class="contactus-phone"> 
+                            <span class="contactus-title">Holiday Inn Palm Beach Airport</span> 
+                            <span class="spbold conalignbottom spbold">
+                              <a target="_blank" href="tracking/click-location-map.html" id="hotel-address">1301 Belvedere Rd, West Palm Beach, Florida 33405</a>
+                            </span> 
+                          </span>
+                        </div>
+                        <div class="clear"></div>
+                      </div>
+                      <div class="con-block con-block-second">
+                        <div class="cont-icon"><span class="icon-email"></span></div>
+                        <div class="cont-desc">
+                          <div class="contactus-email"> 
+                            <span class="contactus-title">Email</span> 
+                            <span class="conalignbottom "><a href="cdn-cgi/l/email-protection.html#d8b1b6beb798b0b1afbdabaca8b9b4b5babdb9bbb0f6bbb7b5" rel="nofollow"><span class="__cf_email__" data-cfemail="670e090108270f0e1002141317060b0a050206040f4904080a">[email&#160;protected]</span></a></span> 
+                          </div>
+                        </div>
+                        <div class="clear"></div>
+                      </div>
+                      <div class="con-block con-block-thrd">
+                        <div class="cont-icon"><span class="icon-phone"></span></div>
+                        <div class="cont-desc">
+                          <span class="contactus-phone"> 
+                            <span class="contactus-title">Phone</span> 
+                            <span class="spbold conalignbottom spbold"><a href="tel:561-659-3880" data-phonenumber="property-phone" target="_blank" rel="nofollow">561-659-3880</a></span> 
+                          </span>
+                        </div>
+                        <div class="clear"></div>
+                      </div>
+
+                      <div class="con-block con-block-last">
+                        <div class="cont-icon"><span class="icon-print"></span></div>
+                        <div class="cont-desc">
+                          <span class="contactus-phone"> 
+                            <span class="contactus-title">Fax</span> 
+                            <span class="spbold conalignbottom spbold">561-833-9218</span> 
+                          </span>
+                        </div>
+                        <div class="clear"></div>
+                      </div>
+                      <div class="clear"></div>
+                    </div>
+
+<!-------------------------form---------------------------->
+                    <div class="con-form">
+                      <div class="contact-title">Get in Touch</div>
+                      <div id="gdpr-rfp">
+                        By submitting this form, you consent to share your personal information with us to service your request and for communication purposes. We do not sell your data to third parties. If you wish to access or erase your personal information, you can do so by submitting your details 
+                        <a href="privacy-policy.html#gdprform">here</a>.<br><br>
+                      </div>
+                      <div class="boxspacer"></div>
+
+                      <!--form Email-->
+                      <form name="email_form" class="form-horizontal" ng-submit="submit(email_form.$valid)" novalidate>
+                        <div class="quickrfpbox formbox">
+                          <div class="commentrow">
+
+                            <!--ask for name-->
+                            <div class="frmfieldset form-input frmfieldset-fullwidth">
+
+                              <!--lable-->
+                              <div class="commentlable">
+                                <label for="name" class="quickrfp-title">Name <span class="asterisk"> - Required</span></label>
+                              </div>
+
+                              <!--name input-->
+                              <div class="commentinput form-group" show-errors>
+                                <input name="name" type='text' ng-model="name" class='quickrfpforminputbox form-control' ng-required="true">
+                                <div ng-messages="email_form.name.$error" role="alert">
+                                  <p class="help-block error-text" ng-message="required">Name can not be empty</p>
+                                </div>                                
+                              </div>
+                            </div>
+
+                            <!--ask for email-->
+                            <div class="frmfieldset form-input">
+
+                              <!--lable-->
+                              <div class="commentlable">
+                                <label for="EMAIL" class="quickrfp-title">Email <span class="asterisk"> - Required</span></label>
+                              </div>
+
+                              <!--email input-->
+                              <div class="commentinput form-group" show-errors>
+                                <input name="email" type='email' ng-model="email" class='quickrfpforminputbox form-control email' ng-required="true">
+                                <div ng-messages="email_form.email.$error" role="alert">
+                                  <p class="help-block error-text" ng-message="required">Email can not be empty</p>
+                                  <p class="help-block error-text" ng-message="email">Email address is invalid.</p>
+                                </div>                                
+                              </div>
+                            </div>
+
+
+                            <!--ask for phone-->
+                            <div class="frmfieldset con-frmfieldset-right form-input">
+                              <!--lable-->
+                              <div class="commentlable">
+                                <label for="PHONE">Phone <span class="asterisk"> - Required</span></label>
+                              </div>
+
+                              <!--phone input-->
+                              <div class="commentinput form-group" show-errors>
+                                <input name="phone" type='text' ng-model="phone" class='rfpforminputbox form-control phone' pattern="\d{10}" ng-required="true">
+                                <div ng-messages="email_form.phone.$error" role="alert">
+                                  <p class="help-block error-text" ng-message="required">Phone can not be empty</p>
+                                  <p class="help-block error-text" ng-message = "pattern">Please provide valid phone number</p>
+                                </div>                                
+                              </div>
+                            </div>
+
+
+                            <!--ask for detail-->
+                            <div class="frmfieldset frmfieldset-fullwidth form-input">
+                              <!--lable-->
+                              <div class="commentlable">
+                                <label for="DETAILS">Details <span class="asterisk"> - Optional</span> </label>
+                              </div>
+
+                              <!--detail input-->
+                              <div class="commentinput form-group" show-errors>
+                                <textarea name="detail" type='text' ng-model="detail" class='rfpformtextarea form-control phone' ng-required="false"></textarea>
+                                <div ng-messages="email_form.detail.$error" role="alert">
+                                  <p class="help-block error-text" ng-message="required">Detail can not be empty</p>
+                                </div>                                
+                              </div>
+                            </div>
+
+
+                            <div class="clear"></div>
+                            <!--submit button-->
+                            <div class='form-group'>
+                              <button type='submit' class='button' class="form-control">Submit</button>
+                            </div>
+                            
+                            <div class="clear"></div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="clear"></div>
+                    </div>
+<!-----------------------form end--------------------------->
+                  </article>
+                </div>
+              </section>
+              <div class="clear"> </div>
+            </div>
+            <div class="fullwidth"><div class="contact-map">
+              <div class="map-holder">
+                <div class="loactionmap-box">
+                  <div id='gmap_canvas' class="location-map" aria-hidden="true" tabindex="-1"><div id="map" style="width: 100%; height:100%;"></div>
+                </div>
+              </div>
+            </div>
           </div>
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>ddddddddddd
-        </div>ddddddddddd
-        <div class="form-group">
-          <button type="submit" class="btn btn-default">{{vm.contact._id ? 'Update' : 'Create'}}</button>
+          <div class="clear">&nbsp;</div>
         </div>
-        <div ng-show="vm.error" class="text-danger">
-          <strong ng-bind="vm.error"></strong>
-        </div>
-      </fieldset>
-    </form>
-  </div>
+      </div>
+    </section>
+</section>
   
 </section>

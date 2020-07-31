@@ -6,48 +6,39 @@
     .module('contacts')
     .controller('ContactsController', ContactsController);
 
-  ContactsController.$inject = ['$scope', '$state', '$window', 'Authentication', 'contactResolve'];
+  ContactsController.$inject = ['$scope', '$state', '$window', 'Authentication', "ContactsService", "Notification"];
 
-  function ContactsController ($scope, $state, $window, Authentication, contact) {
-    var vm = this;
+  function ContactsController ($scope, $state, $window, Authentication, ContactsService, Notification) {
 
-    vm.authentication = Authentication;
-    vm.contact = contact;
-    vm.error = null;
-    vm.form = {};
-    vm.remove = remove;
-    vm.save = save;
+    $scope.name;
 
-    // Remove existing Contact
-    function remove() {
-      if ($window.confirm('Are you sure you want to delete?')) {
-        vm.contact.$remove($state.go('contacts.list'));
-      }
-    }
+    $scope.submit = function(isValid){
+        if (!isValid) {
+          $scope.$broadcast('show-errors-check-validity', 'email_form');
+          console.log("error");
+          return false;
+        }
+        console.log("name:" + $scope.name);
+        console.log("email:" + $scope.email);
+        console.log("phone:" + $scope.phone);
+        console.log("detail:" + $scope.detail);
 
-    // Save Contact
-    function save(isValid) {
-      if (!isValid) {
-        $scope.$broadcast('show-errors-check-validity', 'vm.form.contactForm');
-        return false;
-      }
+        var data={
+          "name": $scope.name,
+          "email": $scope.email,
+          "phone": $scope.phone,
+          "detail": $scope.detail
+        };
 
-      // TODO: move create/update logic to service
-      if (vm.contact._id) {
-        vm.contact.$update(successCallback, errorCallback);
-      } else {
-        vm.contact.$save(successCallback, errorCallback);
-      }
+        ContactsService.email(data)
+          .then(function(response){
+            Notification.success({ message: "Thank your for your information, we will get back to you soon!", title: '<i class="glyphicon glyphicon-ok"></i> Successfully!' });
+          }, function(error){
+            Notification.error({ message: "Sorry! Cannot submit your request, please try again later!", title: '<i class="glyphicon glyphicon-remove"></i>Fail'});
+          });     
+    };
 
-      function successCallback(res) {
-        $state.go('contacts.view', {
-          contactId: res._id
-        });
-      }
 
-      function errorCallback(res) {
-        vm.error = res.data.message;
-      }
-    }
+
   }
 }());

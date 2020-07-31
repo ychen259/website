@@ -38,6 +38,10 @@ exports.invokeRolesPolicies = function () {
     }, {
       resources: '/api/contacts/:contactId',
       permissions: ['get']
+    },
+    {
+      resources: '/api/sendEmail',
+      permissions: ['post']
     }]
   }]);
 };
