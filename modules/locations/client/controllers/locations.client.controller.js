@@ -12,6 +12,7 @@
       
     $scope.backToHomePage = function(){
        $state.go('home');
+       window.scrollTo(0, 0);
     }
   }
 }());
