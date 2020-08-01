@@ -1188,6 +1188,8 @@ a.button:link,a.button:visited,#goog-wm-sb,.viewlargermap,#backtotop,.buttonco,b
   border-top: 1px solid #656464;
   width: 100%;
   z-index: 11;
+
+// margin: 0 15px;
 }
 .leftbar-div {
   color: #ffffff;
