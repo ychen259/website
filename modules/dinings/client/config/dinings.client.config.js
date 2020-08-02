@@ -13,6 +13,7 @@
       title: 'Dining',
       state: 'dinings.default',
       //type: 'dropdown',
+      position: 3,
       roles: ['*']
     });
 

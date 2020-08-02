@@ -13,6 +13,7 @@
       title: 'Meeting & events',
       state: 'meeting-events.default',
       //type: 'dropdown',
+      position: 4,
       roles: ['*']
     });
 

@@ -13,6 +13,7 @@
       title: 'Location',
       state: 'locations.default',
       //type: 'dropdown',
+      position: 5,
       roles: ['*']
     });
 
