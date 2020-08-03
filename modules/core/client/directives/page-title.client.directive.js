@@ -18,13 +18,15 @@
       $rootScope.$on('$stateChangeSuccess', listener);
 
       function listener(event, toState) {
-        var applicationCoreTitle = 'MEAN.js',
-          separator = ' - ',
+        var applicationCoreTitle = 'Aztec Hotel Monrovia',
+          separator = ' | ',
           stateTitle = applicationCoreTitle + separator;
 
-        toState.name.split('.').forEach(function (value, index) {
+          /*Hide the state name*/
+        /*toState.name.split('.').forEach(function (value, index) {
           stateTitle = stateTitle + value.charAt(0).toUpperCase() + value.slice(1) + separator;
         });
+        */
         if (toState.data && toState.data.pageTitle) {
           stateTitle = $interpolate(stateTitle + toState.data.pageTitle + separator)(($state.$current.locals.globals));
         }

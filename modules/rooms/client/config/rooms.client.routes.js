@@ -20,7 +20,7 @@
         controller: 'RoomsController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Rooms'
+          pageTitle: 'Rooms' 
         }
       });
   }
