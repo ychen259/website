@@ -618,10 +618,11 @@ header,#logo,#topnav,.reservation-bg,#photogallery-thumbs li::after,#photogaller
 
 
 .dining-item-default-title::after{top:0;z-index:-1;background-size:cover;position:absolute;left:0;right:0;height:100%;background:#000;content:'';background:url(https://www.hipalmbeachairport.com/images_noindex/bg-ttd.png) repeat center center;background-size:100% 100%}.dining-item-box.dining-item-box5{overflow:hidden}.dining-item-default-title{padding:40px}
-#topnav a.navON:link::before,#topnav a.navON:visited::before,#topnav a.navON:hover::before,#topnav a.nav:hover::before,#topnav .navhover a.nav::before,#topnav a.navON:focus::before,#topnav a.nav:focus::before{bottom:0;opacity:1}@media only screen and (max-width:1200px){#wrapper{min-width:1024px}
+#topnav a.navON:link::before,#topnav a.navON:visited::before,#topnav a.navON:hover::before,#topnav a.nav:hover::before,#topnav .navhover a.nav::before,#topnav a.navON:focus::before,#topnav a.nav:focus::before{bottom:0;opacity:1}
+@media only screen and (max-width:1200px){#wrapper{min-width:1024px}
 
 header,#container,footer,#reservation{
-	width:98%
+	//width:98%
 }#reservation{max-width:1024px;text-align:center}#number{top:12px}#weather-box{top:31px;left:0}#subnav{max-width:290px;top:6px}#topnav li{padding-right:3%}
 #topnav li.logocenter a.logocenter{
 	width:23%;
@@ -665,3 +666,6 @@ body.zommLevel #topnav li a{font-size:13px;padding:9px 0 0}body.zommLevel #topna
 	max-width: 1600px;
 }
 
+#background_color{
+	background-color:#f1ef60;
+}

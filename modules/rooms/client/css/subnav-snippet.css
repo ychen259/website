@@ -1376,7 +1376,7 @@ margin-top:14px;
 
 @media only screen and (max-width: 1200px) {
  // #wrapper {	min-width: 1024px;  }
-  header, #container, footer , #reservation{	width: 98%;}
+ // header, #container, footer , #reservation{	width: 98%;}
   #reservation { max-width: 1024px; text-align: center;}
   #number {	top: 12px; padding-left:13%;}
   #weather-box {	top: 31px; left: 0;}
