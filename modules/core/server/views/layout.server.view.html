@@ -61,14 +61,15 @@
 
 <body class="ng-cloak">
 
-
-  <header ng-include="'/modules/core/client/views/header.client.view.html'" class="navbar navbar-fixed-top "></header>
-  <!--<header ng-include="'/modules/core/client/views/header.client.view.html'" class=" "></header>-->
   <section class="content"> <!--go with fixed top and need to fix #middle in home.css-->
+
   <!--<section class="">-->
     <section class="container-fluid">
+      <header ng-include="'/modules/core/client/views/header.client.view.html'" class="navbar"></header>
+	 <!--  <header ng-include="'/modules/core/client/views/header.client.view.html'" class="navbar navbar-fixed-top"></header>-->
       {{{block "content"}}}
       <span ng-include="'/modules/core/client/views/footer.client.view.html'"></span>
+      <span ng-include="'/modules/core/client/views/booking.client.view.html'" class=""></span>
     </section>
 
       <button onclick="scrollToTop()" id="backtotop" title="Go to top"><span class="icon-arrow-up2" aria-hidden="true"></span></button>
@@ -91,7 +92,7 @@ function scrollFunction() {
     mybutton.style.display = "none";
   }
 }
-//document.write(unescape("%3Cscript src='https://www.hipalmbeachairport.com/dynamic/js/home.aspx' type='text/javascript'%3E%3C/script%3E"));
+
 
 
 function scrollToTop() {

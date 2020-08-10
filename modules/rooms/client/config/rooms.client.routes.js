@@ -17,10 +17,10 @@
       .state('rooms.default', {
         url: '',
         templateUrl: 'modules/rooms/client/views/rooms.client.view.html',
-        controller: 'RoomsListController',
+        controller: 'RoomsController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Rooms default'
+          pageTitle: 'Rooms' 
         }
       });
   }

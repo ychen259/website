@@ -13,6 +13,7 @@
       title: 'Things To Do',
       state: 'things-to-dos.default',
       //type: 'dropdown',
+      position: 6,
       roles: ['*']
     });
 

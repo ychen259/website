@@ -12,74 +12,8 @@
           </ul>
         </div>
 
-        <div class="reservation-bg">
-            <div id="reservation">
-                <div id="reservationtable">
-                    <form enctype="application/x-www-form-urlencoded" target="_blank" method="post" name="resform" id="resform" action="https://www.hipalmbeachairport.com/tracking/click-reservation.aspx">
-                        <ul>
-                            <li class="custom-reservation">
-                                <label class="rtitle" for="checkindate">Check-in</label>
-                                <input class="resinputbox" readonly="" id="checkindate" name="checkindate" type="text" value="">
-                            </li>
-                            <li class="custom-reservation">
-                                <label class="rtitle" for="checkoutdate">Check-out</label>
-                                <input class="resinputbox" readonly="" id="checkoutdate" name="checkoutdate" type="text" value="">
-                            </li>
-                            <li class="custom-reservation">
-                                <label class="rtitle" for="NumberOfRooms">Rooms</label>
-                                <select name="Rooms" id="NumberOfRooms" class="resdropdown">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                </select>
-                            </li>
-                            <li class="custom-reservation">
-                                <label class="rtitle" for="NumberOfAdults">Adults</label>
-                                <select name="Adults" id="NumberOfAdults" class="resdropdown">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                </select>
-                            </li>
-                            <li class="last-child custom-reservation">
-                                <label class="rtitle" for="NumberOfChildrens">Children</label>
-                                <select name="Children" id="NumberOfChildrens" class="resdropdown">
-                                    <option value="0">0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                </select>
-                            </li>
-                            <li class=""> 
-                                  <a class="button" role="button" href="javascript:{}" onkeypress="reservation_validation(); pushToGtmRenderByDom(this);" onclick="reservation_validation(); pushToGtmRenderByDom(this);" data-autodatalayer="" data-msevent="booking main" data-mscategory="booking entrances" data-msaction="click"><span class="formslable" aria-hidden="true">booking widget</span>Check Availability</a> 
-                            </li>
-                            <li class="last-child-btn res-text1 remind-me-later" id="remindme"><a class="button" href="javascript:{}" id="bookingremind">Remind me Later</a>
-                            </li>
-                        </ul>
-                    </form>
-                </div>
-                <div class="clear"></div>
-                <div id="res-rate-txt"> <a href="https://www.ihg.com/hotels/us/en/customer-care/lowest-internet-rate-terms-conditions" target="_blank" rel="nofollow">Best Rate Guarantee</a></div>
-            </div>
-        </div>
+
+
         <div class="bankforreserv"></div>
     </div><!--end middle-->
 
@@ -89,7 +23,7 @@
             <div id="container">
                 <div id="content">
                     <div id="breadcrumb">
-                      <a href="index.html">Home</a><span class="brd-icon icon-rightArrow"></span>Location
+                      <a ng-click="backToHomePage()" href="#">Home</a><span class="brd-icon icon-rightArrow"></span>Location
                     </div>
                     <section id="header">Location</section>
                     <div id="box">
@@ -106,9 +40,12 @@
                       </article>
 
 <!--------------------map code here----------------->
-                      <div class="box2">
+                      <div class="box2" id = "e-map">
                         <h2 class="padbottom">West Palm Beach, Florida Map</h2>
+                        <!--
                           <div id="map_canvas" class="location-map" style="width: 100%; height: 400px;" ng-controller="HomeController as Home"></div>
+                        -->
+                        <iframe class="location-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.80065504455!2d-118.00798928567798!3d34.151441819945155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2d9434149c1c1%3A0xb1391055dac3c68!2s311%20W%20Foothill%20Blvd%2C%20Monrovia%2C%20CA%2091016!5e0!3m2!1sen!2sus!4v1596325897552!5m2!1sen!2sus" width=100% height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                       </div>
 
 <script>
@@ -143,8 +80,10 @@ infowindow.open(map,marker);
 }
 
 </script>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd4CZ-xvUEqITMM8nMi0JvH4LZ5Nltwn8&callback=myMap"></script>
+<!--
+<script src="https://maps.googleapis.com/maps/api/js?key="  "&callback=myMap">
+-->
+</script>
 
 <!-------------------------------------------------->
 

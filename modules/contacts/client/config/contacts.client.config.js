@@ -13,6 +13,7 @@
       title: 'Contact',
       state: 'contacts.default',
       //type: 'dropdown',
+      position: 7,
       roles: ['*']
     });
 

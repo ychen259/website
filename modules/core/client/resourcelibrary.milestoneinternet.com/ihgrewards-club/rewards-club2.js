@@ -1,3 +1,0 @@
-if(document.getElementById('reward-club-logo')){var logolink,imagepath;if(logolink==null){logolink="http://www.ihgrewardsclub.com";}
-if(imagepath==null){imagepath="https://resourcelibrary.milestoneinternet.com/ihgrewards-club/ihg-rc-new-logo2.png";}
-document.getElementById('reward-club-logo').innerHTML='<a rel="nofollow" href="'+logolink+'" target="_blank"><img width="181" height="55" alt="IHG Rewards Club" title="IHG Rewards Club" src="'+imagepath+'"></a>';document.getElementById('reward-club-logo').style.height='55px';document.getElementById('reward-club-logo').style.width='181px';}

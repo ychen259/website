@@ -13,6 +13,7 @@
       title: 'Services',
       state: 'services.default',
       //type: 'dropdown',
+      position: 2,
       roles: ['*']
     });
 

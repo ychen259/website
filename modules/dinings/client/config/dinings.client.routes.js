@@ -17,10 +17,10 @@
       .state('dinings.default', {
         url: '',
         templateUrl: 'modules/dinings/client/views/dining.client.view.html',
-        controller: 'DiningsListController',
+        controller: 'DiningsController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Dinings default'
+          pageTitle: 'Dining'
         }
       });
   }

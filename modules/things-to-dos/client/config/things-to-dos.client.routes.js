@@ -17,10 +17,10 @@
       .state('things-to-dos.default', {
         url: '',
         templateUrl: 'modules/things-to-dos/client/views/things-to-do.client.view.html',
-        controller: 'ThingsToDosListController',
+        controller: 'ThingsToDosController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Things to dos List'
+          pageTitle: 'Things to do'
         }
       });
   }

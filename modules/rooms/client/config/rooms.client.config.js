@@ -13,6 +13,7 @@
       title: 'Rooms',
       state: 'rooms.default',
       //type: 'dropdown',
+      position: 1,
       roles: ['*']
     });
 
