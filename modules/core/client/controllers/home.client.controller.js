@@ -15,6 +15,9 @@
        $state.go('rooms.default');
        window.scrollTo(0, 0);
     }
-    
+    $scope.goToLocation = function(){
+       $state.go('locations.default');
+       window.scrollTo(0, 0);
+    }
 
 }]);
