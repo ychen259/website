@@ -108,7 +108,6 @@ module.exports.initViewEngine = function (app) {
 module.exports.initSession = function (app, db) {
   // Express MongoDB session storage
 
-  console.log("db" +config.db.uri)
   app.use(session({
     saveUninitialized: true,
     resave: true,
