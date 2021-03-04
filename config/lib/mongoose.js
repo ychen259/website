@@ -26,11 +26,10 @@ module.exports.connect = function (callback) {
   var options = _.merge(config.db.options || {}, { useMongoClient: true });
 
   mongoose
-    .connect(config.db.uri, options)
+    .connect(config.db.uri, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(function (connection) {
       // Enabling mongoose debug mode if required
       mongoose.set('debug', config.db.debug);
-
       // Call callback FN
       if (callback) callback(connection.db);
     })

@@ -9,7 +9,7 @@ var config = require('../config'),
   logger = require('./logger'),
   bodyParser = require('body-parser'),
   session = require('express-session'),
-  MongoStore = require('connect-mongo')(session),
+  MongoStore = require('connect-mongo').default,
   favicon = require('serve-favicon'),
   compress = require('compression'),
   methodOverride = require('method-override'),
@@ -107,6 +107,8 @@ module.exports.initViewEngine = function (app) {
  */
 module.exports.initSession = function (app, db) {
   // Express MongoDB session storage
+
+  console.log("db" +config.db.uri)
   app.use(session({
     saveUninitialized: true,
     resave: true,
@@ -118,7 +120,7 @@ module.exports.initSession = function (app, db) {
     },
     name: config.sessionKey,
     store: new MongoStore({
-      db: db,
+      mongoUrl: config.db.uri,
       collection: config.sessionCollection
     })
   }));
@@ -149,7 +151,7 @@ module.exports.initHelmetHeaders = function (app) {
   app.use(helmet.ieNoOpen());
   app.use(helmet.hsts({
     maxAge: SIX_MONTHS,
-    includeSubdomains: true,
+    includeSubDomains: true,
     force: true
   }));
   app.disable('x-powered-by');
