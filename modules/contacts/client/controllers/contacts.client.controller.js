@@ -18,11 +18,7 @@
           console.log("error");
           return false;
         }
-        console.log("name:" + $scope.name);
-        console.log("email:" + $scope.email);
-        console.log("phone:" + $scope.phone);
-        console.log("detail:" + $scope.detail);
-
+        
         var data={
           "name": $scope.name,
           "email": $scope.email,
