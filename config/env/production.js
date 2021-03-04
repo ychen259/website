@@ -13,13 +13,14 @@ module.exports = {
   // Binding to 127.0.0.1 is safer in production.
   host: process.env.HOST || '0.0.0.0',
   db: {
-    uri: process.env.MONGOHQ_URL || process.env.MONGODB_URI || 'mongodb://ychen259:Aa947496@ds015919.mlab.com:15919/aztec-hotel',
+    uri: process.env.MONGOHQ_URL || process.env.MONGODB_URI || 'mongodb+srv://ychen259:Aa947496@cluster0.wccdn.mongodb.net/aztechotel',
     options: {
       /**
       * Uncomment to enable ssl certificate based authentication to mongodb
       * servers. Adjust the settings below for your specific certificate
       * setup.
       * for connect to a replicaset, rename server:{...} to replset:{...}
+
       ssl: true,
       sslValidate: false,
       checkServerIdentity: false,
@@ -27,11 +28,13 @@ module.exports = {
       sslCert: fs.readFileSync('./config/sslcerts/ssl-cert.pem'),
       sslKey: fs.readFileSync('./config/sslcerts/ssl-key.pem'),
       sslPass: '1234'
+
       */
     },
     // Enable mongoose debug mode
     debug: process.env.MONGODB_DEBUG || false
   },
+  sessionSecret: process.env.SESSION_SECRET || 'super amazing secret',
   log: {
     // logging with Morgan - https://github.com/expressjs/morgan
     // Can specify one of 'combined', 'common', 'dev', 'short', 'tiny'
@@ -76,13 +79,26 @@ module.exports = {
     callbackURL: '/api/auth/paypal/callback',
     sandbox: false
   },
-  mailer: {
+  /*mailer: {
     from: process.env.MAILER_FROM || 'MAILER_FROM',
     options: {
       service: process.env.MAILER_SERVICE_PROVIDER || 'MAILER_SERVICE_PROVIDER',
       auth: {
         user: process.env.MAILER_EMAIL_ID || 'MAILER_EMAIL_ID',
         pass: process.env.MAILER_PASSWORD || 'MAILER_PASSWORD'
+      }
+    }
+  },*/
+  mailer: {
+    from: process.env.MAILER_FROM || 'MAILER_FROM' || 'aztechotelwebsite@gmail.com',
+    to: "yuzhuochen12@gmail.com",
+    options: {
+      service: 'Gmail',
+      secure: false,
+      port:465,
+      auth: {
+        user: 'aztechotelwebsite@gmail.com',
+        pass: 'aztechotel'
       }
     }
   },

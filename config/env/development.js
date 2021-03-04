@@ -4,7 +4,8 @@ var defaultEnvConfig = require('./default');
 
 module.exports = {
   db: {
-    uri: process.env.MONGOHQ_URL || process.env.MONGODB_URI || 'mongodb://ychen259:Aa947496@ds015919.mlab.com:15919/aztec-hotel',
+    uri: process.env.MONGOHQ_URL || process.env.MONGODB_URI || 'mongodb+srv://ychen259:Aa947496@cluster0.wccdn.mongodb.net/aztechotel',
+    /*'mongodb://ychen259:Aa947496@cluster0-shard-00-00.wccdn.mongodb.net:27017,cluster0-shard-00-01.wccdn.mongodb.net:27017,cluster0-shard-00-02.wccdn.mongodb.net:27017/sasasas?ssl=true&replicaSet=atlas-iulcjf-shard-0&authSource=admin&retryWrites=true&w=majority',*/
     //mongodb+srv://ychen259:<password>@cluster0.wccdn.mongodb.net/test
     //
     options: {},
@@ -60,12 +61,24 @@ module.exports = {
     sandbox: true
   },
   mailer: {
+    /*
     from: process.env.MAILER_FROM || 'MAILER_FROM',
     options: {
       service: process.env.MAILER_SERVICE_PROVIDER || 'MAILER_SERVICE_PROVIDER',
       auth: {
         user: process.env.MAILER_EMAIL_ID || 'MAILER_EMAIL_ID',
         pass: process.env.MAILER_PASSWORD || 'MAILER_PASSWORD'
+      }
+    }*/
+    from: process.env.MAILER_FROM || 'MAILER_FROM' || 'aztechotelwebsite@gmail.com',
+    to: "yuzhuochen12@gmail.com",
+    options: {
+      service: 'Gmail',
+      secure: false,
+      port:465,
+      auth: {
+        user: 'aztechotelwebsite@gmail.com',
+        pass: 'aztechotel'
       }
     }
   },
@@ -78,7 +91,7 @@ module.exports = {
     // Order of collections in configuration will determine order of seeding.
     // i.e. given these settings, the User seeds will be complete before
     // Article seed is performed.
-    collections: [{
+    /*collections: [{
       model: 'User',
       docs: [{
         data: {
@@ -120,6 +133,6 @@ module.exports = {
           content: 'This is a seeded Article for the development environment'
         }
       }]
-    }]
+    }]*/
   }
 };

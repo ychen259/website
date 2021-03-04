@@ -10,7 +10,7 @@ var config = require('../config'),
   passport = require('passport'),
   socketio = require('socket.io'),
   session = require('express-session'),
-  MongoStore = require('connect-mongo')(session);
+  MongoStore = require('connect-mongo').default;
 
 // Define the Socket.io configuration method
 module.exports = function (app, db) {
@@ -71,7 +71,7 @@ module.exports = function (app, db) {
 
   // Create a MongoDB storage object
   var mongoStore = new MongoStore({
-    db: db,
+    mongoUrl: config.db.uri,
     collection: config.sessionCollection
   });
 
