@@ -1,32 +1,49 @@
 'use strict';
 
-var defaultEnvConfig = require('./default');
+var fs = require('fs');
 
 module.exports = {
+  secure: {
+    ssl: false,
+    privateKey: './config/sslcerts/key.pem',
+    certificate: './config/sslcerts/cert.pem',
+    caBundle: './config/sslcerts/cabundle.crt'
+  },
+  port: process.env.PORT || 8443,
+  // Binding to 127.0.0.1 is safer in production.
+  host: process.env.HOST || '0.0.0.0',
   db: {
     uri: process.env.MONGOHQ_URL || process.env.MONGODB_URI || 'mongodb+srv://ychen259:Aa947496@cluster0.wccdn.mongodb.net/aztechotel',
-    /*'mongodb://ychen259:Aa947496@cluster0-shard-00-00.wccdn.mongodb.net:27017,cluster0-shard-00-01.wccdn.mongodb.net:27017,cluster0-shard-00-02.wccdn.mongodb.net:27017/sasasas?ssl=true&replicaSet=atlas-iulcjf-shard-0&authSource=admin&retryWrites=true&w=majority',*/
-    //mongodb+srv://ychen259:<password>@cluster0.wccdn.mongodb.net/test
-    //
-    options: {},
+    options: {
+      /**
+      * Uncomment to enable ssl certificate based authentication to mongodb
+      * servers. Adjust the settings below for your specific certificate
+      * setup.
+      * for connect to a replicaset, rename server:{...} to replset:{...}
+      ssl: true,
+      sslValidate: false,
+      checkServerIdentity: false,
+      sslCA: fs.readFileSync('./config/sslcerts/ssl-ca.pem'),
+      sslCert: fs.readFileSync('./config/sslcerts/ssl-cert.pem'),
+      sslKey: fs.readFileSync('./config/sslcerts/ssl-key.pem'),
+      sslPass: '1234'
+      */
+    },
     // Enable mongoose debug mode
     debug: process.env.MONGODB_DEBUG || false
   },
-
+  sessionSecret: process.env.SESSION_SECRET || 'super amazing secret',
   log: {
     // logging with Morgan - https://github.com/expressjs/morgan
     // Can specify one of 'combined', 'common', 'dev', 'short', 'tiny'
-    format: 'dev',
+    format: process.env.LOG_FORMAT || 'combined',
     fileLogger: {
-      directoryPath: process.cwd(),
-      fileName: 'app.log',
+      directoryPath: process.env.LOG_DIR_PATH || process.cwd(),
+      fileName: process.env.LOG_FILE || 'app.log',
       maxsize: 10485760,
       maxFiles: 2,
       json: false
     }
-  },
-  app: {
-    title: defaultEnvConfig.app.title + ' - Development Environment'
   },
   facebook: {
     clientID: process.env.FACEBOOK_ID || 'APP_ID',
@@ -58,10 +75,9 @@ module.exports = {
     clientID: process.env.PAYPAL_ID || 'CLIENT_ID',
     clientSecret: process.env.PAYPAL_SECRET || 'CLIENT_SECRET',
     callbackURL: '/api/auth/paypal/callback',
-    sandbox: true
+    sandbox: false
   },
-  mailer: {
-    /*
+  /*mailer: {
     from: process.env.MAILER_FROM || 'MAILER_FROM',
     options: {
       service: process.env.MAILER_SERVICE_PROVIDER || 'MAILER_SERVICE_PROVIDER',
@@ -69,7 +85,9 @@ module.exports = {
         user: process.env.MAILER_EMAIL_ID || 'MAILER_EMAIL_ID',
         pass: process.env.MAILER_PASSWORD || 'MAILER_PASSWORD'
       }
-    }*/
+    }
+  },*/
+  mailer: {
     from: process.env.MAILER_FROM || 'MAILER_FROM' || 'aztechotelwebsite@gmail.com',
     to: "yuzhuochen12@gmail.com",
     options: {
@@ -83,16 +101,12 @@ module.exports = {
       }
     }
   },
-  livereload: true,
   seedDB: {
     seed: process.env.MONGO_SEED === 'true',
     options: {
       logResults: process.env.MONGO_SEED_LOG_RESULTS !== 'false'
     },
-    // Order of collections in configuration will determine order of seeding.
-    // i.e. given these settings, the User seeds will be complete before
-    // Article seed is performed.
-    /*collections: [{
+    collections: [{
       model: 'User',
       docs: [{
         data: {
@@ -102,38 +116,7 @@ module.exports = {
           lastName: 'Local',
           roles: ['admin', 'user']
         }
-      }, {
-        // Set to true to overwrite this document
-        // when it already exists in the collection.
-        // If set to false, or missing, the seed operation
-        // will skip this document to avoid overwriting it.
-        overwrite: true,
-        data: {
-          username: 'local-user',
-          email: 'user@localhost.com',
-          firstName: 'User',
-          lastName: 'Local',
-          roles: ['user']
-        }
       }]
-    }, {
-      model: 'Article',
-      options: {
-        // Override log results setting at the
-        // collection level.
-        logResults: true
-      },
-      skip: {
-        // Skip collection when this query returns results.
-        // e.g. {}: Only seeds collection when it is empty.
-        when: {} // Mongoose qualified query
-      },
-      docs: [{
-        data: {
-          title: 'First Article',
-          content: 'This is a seeded Article for the development environment'
-        }
-      }]
-    }]*/
+    }]
   }
 };
