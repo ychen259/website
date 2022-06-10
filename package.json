@@ -63,7 +63,7 @@
     "express-session": "^1.17.1",
     "generate-password": "^1.5.1",
     "glob": "^7.1.6",
-    "grunt": "^1.2.1",
+    "grunt": "^1.5.3",
     "gulp": "^4.0.2",
     "gulp-angular-templatecache": "~2.0.0",
     "gulp-autoprefixer": "~4.0.0",
