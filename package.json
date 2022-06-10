@@ -45,7 +45,7 @@
     "ajv": "^5.0.0",
     "amazon-s3-uri": "0.0.3",
     "angular-google-maps": "~2.2.1",
-    "async": "~2.5.0",
+    "async": "~2.6.4",
     "aws-sdk": "^2.720.0",
     "body-parser": "^1.19.0",
     "bower": "^1.8.8",
