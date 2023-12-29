@@ -13,7 +13,7 @@ module.exports = {
   // Binding to 127.0.0.1 is safer in production.
   host: process.env.HOST || '0.0.0.0',
   db: {
-    uri: process.env.MONGOHQ_URL || process.env.MONGODB_URI || 'mongodb+srv://ychen259:Aa947496@cluster0.wccdn.mongodb.net/aztechotel',
+    uri: process.env.MONGOHQ_URL || process.env.MONGODB_URI || '',
     options: {
       /**
       * Uncomment to enable ssl certificate based authentication to mongodb
@@ -88,18 +88,7 @@ module.exports = {
     }
   },*/
   mailer: {
-    from: process.env.MAILER_FROM || 'MAILER_FROM' || 'aztechotelwebsite@gmail.com',
-    to: "yuzhuochen12@gmail.com",
-    options: {
-      service: 'Gmail',
-      secure: false,
-      port:465,
-      auth: {
-        user: 'aztechotelwebsite@gmail.com',
-        //pass: 'aztechotel'
-        pass: "fapdsdtkcgjnoqwb"
-      }
-    }
+
   },
   seedDB: {
     seed: process.env.MONGO_SEED === 'true',
